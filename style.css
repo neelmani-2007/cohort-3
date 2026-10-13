@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'helvetica Neue';
   color: white;
+  font-size: 150px;
 }
 
 html, body {
@@ -11,68 +12,49 @@ html, body {
   width: 100%;
 }
 
+
 main{
   height: 100%;
   width: 100%;
   background-color: black;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "top-center top-center top-center "
+  "left-center center-bottom right-center"
+  "left-bottom center-bottom right-bottom"
+  ;
+}
+  
+.top-center{
+  background-color: lightseagreen;
+  grid-area: top-center;
+}
+.left-center{
+   background-color: royalblue;
+   grid-area: left-center;
+
 }
 
-nav{
-  height: 100px;
-  width: 100%;
-  background-color: rgb(65,174,225);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-.part{
-  height: 100%;
-  width: 20px;
-  background-color: royalblue;
-}
-.part:nth-child(2) {
-  width: 55%;
+.left-bottom{
+   background-color: rgb(179, 192, 231);
+
+
+   grid-area: left-bottom;
 }
 
-section.center{
-  width: 100%;
-  background-color: rgb(233,50,111);
-  display: flex;
-  justify-content: center;
+.center-bottom{
+  background-color: crimson;
+  grid-area: center-bottom;
 }
+.right-center{
+  background-color: tan;
+  grid-area: right-center;
 
-.center-text{
-  width: 55%;
-  text-align: center;
-  padding: 50px;
 }
-
-.center-text h1{
-
-font-size: 70px;
-}
-
-.center-text button {
-  background-color: black;
-  padding: 20px 40px;
-  border-radius: 50px;
-  font-size: 20px;
-}
-
-.bottom {
-  padding: 20px;
-  width: 100%;
-  background-color: rgb(12, 190, 190);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.card{
-  height: 350px;
-  border: 1px solid black;
-  border-radius: 20px;
-  width: 300px;
-  background-color: white;
+.right-bottom{
+  background-color: rgb(212, 138, 27);
+grid-area: right-bottom;
 }
